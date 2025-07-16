@@ -27,6 +27,29 @@ This repository serves as a hands-on learning environment for smart contract dev
 - Explore different contract architectures
 - Practice testing and deployment workflows
 
+## 🚀 Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/yourusername/smart-contract-sandbox.git
+cd smart-contract-sandbox
+```
+
+2. **Install Foundry dependencies:**
+```bash
+forge install
+```
+
+3. **Install additional dependencies (if any):**
+```bash
+npm install
+```
+
+4. **Set up environment variables:**
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
 ## 🛠 Prerequisites
 
 Before getting started, ensure you have the following installed:
