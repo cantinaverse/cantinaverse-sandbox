@@ -27,6 +27,13 @@ This repository serves as a hands-on learning environment for smart contract dev
 - Explore different contract architectures
 - Practice testing and deployment workflows
 
+## 🛠 Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- [Foundry](https://getfoundry.sh/) - Fast, portable, and modular toolkit for Ethereum development
+- [Git](https://git-scm.com/) - Version control system
+
 ## 🚀 Installation
 
 1. **Clone the repository:**
@@ -50,9 +57,28 @@ npm install
 cp .env.example .env
 # Edit .env with your configuration
 ```
-## 🛠 Prerequisites
 
-Before getting started, ensure you have the following installed:
+## 📁 Project Structure
 
-- [Foundry](https://getfoundry.sh/) - Fast, portable, and modular toolkit for Ethereum development
-- [Git](https://git-scm.com/) - Version control system
+```
+smart-contract-sandbox/
+├── src/
+│   ├── Week1/          # Basic contracts and data structures
+│   ├── Week2/          # Intermediate patterns and state management
+│   ├── Week3/          # Advanced patterns and security
+│   └── Week4/          # Complex applications and token standards
+├── test/
+│   ├── Week1/          # Tests for Week 1 contracts
+│   ├── Week2/          # Tests for Week 2 contracts
+│   ├── Week3/          # Tests for Week 3 contracts
+│   └── Week4/          # Tests for Week 4 contracts
+├── script/
+│   ├── Week1/          # Deployment scripts and contract interactions for each contract
+│   ├── Week2/          # Deployment scripts and contract interactions for each contract
+│   ├── Week3/          # Deployment scripts and contract interactions for each contract
+│   └── Week4/          # Deployment scripts and contract interactions for each contract
+├── lib/                # Foundry dependencies
+├── foundry.toml        # Foundry configuration
+└── README.md
+```
+
