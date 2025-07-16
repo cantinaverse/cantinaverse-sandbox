@@ -26,3 +26,10 @@ This repository serves as a hands-on learning environment for smart contract dev
 - Learn security best practices
 - Explore different contract architectures
 - Practice testing and deployment workflows
+
+## 🛠 Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- [Foundry](https://getfoundry.sh/) - Fast, portable, and modular toolkit for Ethereum development
+- [Git](https://git-scm.com/) - Version control system
