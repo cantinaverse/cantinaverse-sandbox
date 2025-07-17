@@ -37,4 +37,6 @@ contract CertificateStorage {
         uint256 indexed certificateId, address indexed issuer, address indexed recipient, string title
     );
 
+    event CertificateRevoked(uint256 indexed certificateId, address indexed issuer, uint256 revokedAt);
+
 }
