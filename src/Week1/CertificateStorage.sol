@@ -6,7 +6,7 @@ pragma solidity ^0.8.19;
  * @dev A decentralized certificate/credential storage system for issuing and verifying certificates
  */
 contract CertificateStorage {
-        struct Certificate {
+    struct Certificate {
         uint256 id;
         address issuer;
         address recipient;
@@ -19,7 +19,7 @@ contract CertificateStorage {
         uint256 revokedAt;
     }
 
-        // Storage
+    // Storage
     Certificate[] public certificates;
     mapping(uint256 => bool) public certificateExists;
     mapping(address => uint256[]) public issuerCertificates;
@@ -33,7 +33,7 @@ contract CertificateStorage {
     // Admin
     address public admin;
 
-        event CertificateIssued(
+    event CertificateIssued(
         uint256 indexed certificateId, address indexed issuer, address indexed recipient, string title
     );
     event CertificateRevoked(uint256 indexed certificateId, address indexed issuer, uint256 revokedAt);
