@@ -44,4 +44,9 @@ contract CertificateStorage {
         require(msg.sender == admin, "Only admin can perform this action");
         _;
     }
+
+    modifier onlyAuthorizedIssuer() {
+        require(authorizedIssuers[msg.sender], "Not an authorized issuer");
+        _;
+    }
 }
