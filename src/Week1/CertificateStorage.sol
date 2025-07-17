@@ -33,4 +33,8 @@ contract CertificateStorage {
     // Admin
     address public admin;
 
+        event CertificateIssued(
+        uint256 indexed certificateId, address indexed issuer, address indexed recipient, string title
+    );
+
 }
