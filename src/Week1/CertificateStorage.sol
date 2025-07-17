@@ -18,4 +18,19 @@ contract CertificateStorage {
         bool revoked;
         uint256 revokedAt;
     }
+
+        // Storage
+    Certificate[] public certificates;
+    mapping(uint256 => bool) public certificateExists;
+    mapping(address => uint256[]) public issuerCertificates;
+    mapping(address => uint256[]) public recipientCertificates;
+    mapping(address => bool) public authorizedIssuers;
+
+    // Stats
+    uint256 public totalCertificates;
+    uint256 private nextCertificateId;
+
+    // Admin
+    address public admin;
+
 }
