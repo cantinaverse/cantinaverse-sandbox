@@ -49,4 +49,25 @@ contract CertificateStorage {
         require(authorizedIssuers[msg.sender], "Not an authorized issuer");
         _;
     }
+
+    modifier validCertificate(uint256 _certificateId) {
+        require(certificateExists[_certificateId], "Certificate does not exist");
+        _;
+    }
+
+    constructor() {
+        admin = msg.sender;
+        authorizedIssuers[msg.sender] = true; // Admin is automatically an authorized issuer
+    }
+
+    /**
+     * @dev Authorize an address to issue certificates
+     * @param _issuer Address to authorize
+     */
+    function authorizeIssuer(address _issuer) external {
+        require(_issuer != address(0), "Invalid issuer address");
+
+        authorizedIssuers[_issuer] = true;
+        emit IssuerAuthorized(_issuer);
+    }
 }
