@@ -40,4 +40,8 @@ contract CertificateStorage {
     event IssuerAuthorized(address indexed issuer);
     event IssuerRevoked(address indexed issuer);
 
+    modifier onlyAdmin() {
+        require(msg.sender == admin, "Only admin can perform this action");
+        _;
+    }
 }
