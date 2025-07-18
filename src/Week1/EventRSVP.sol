@@ -1,0 +1,137 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+/**
+ * @title EventRSVP
+ * @dev An event RSVP system where people can register for events
+ */
+contract EventRSVP {
+    enum RSVPStatus {
+        PENDING,
+        CONFIRMED,
+        CANCELLED,
+        WAITLISTED
+    }
+
+     enum EventStatus {
+        UPCOMING,
+        ONGOING,
+        COMPLETED,
+        CANCELLED
+    }
+
+    struct Event {
+        uint256 id;
+        address organizer;
+        string title;
+        string description;
+        string location;
+        uint256 startTime;
+        uint256 endTime;
+        uint256 maxAttendees;
+        uint256 confirmedCount;
+        uint256 waitlistCount;
+        bool requiresApproval;
+        EventStatus status;
+        uint256 createdAt;
+    }
+
+    struct RSVP {
+        address attendee;
+        uint256 eventId;
+        RSVPStatus status;
+        uint256 timestamp;
+        string message; // Optional message from attendee
+        bool checkedIn;
+        uint256 checkedInAt;
+    }
+
+    // Storage
+    Event[] public events;
+    mapping(uint256 => mapping(address => RSVP)) public eventRSVPs;
+    mapping(uint256 => address[]) public eventAttendees;
+    mapping(uint256 => address[]) public eventWaitlist;
+    mapping(address => uint256[]) public userEvents;
+    mapping(address => uint256[]) public organizerEvents;
+
+    uint256 public totalEvents;
+    uint256 private nextEventId;
+
+    // Configuration
+    uint256 public constant MAX_EVENT_DURATION = 7 days;
+    uint256 public constant MIN_ADVANCE_NOTICE = 1 hours;
+
+    event EventCreated(
+        uint256 indexed eventId, address indexed organizer, string title, uint256 startTime, uint256 maxAttendees
+    );
+
+    event RSVPSubmitted(uint256 indexed eventId, address indexed attendee, RSVPStatus status);
+
+    event RSVPStatusChanged(
+        uint256 indexed eventId, address indexed attendee, RSVPStatus oldStatus, RSVPStatus newStatus
+    );
+
+    event AttendeeCheckedIn(uint256 indexed eventId, address indexed attendee, uint256 timestamp);
+
+    event EventStatusChanged(uint256 indexed eventId, EventStatus newStatus);
+
+    modifier validEvent(uint256 _eventId) {
+        require(_eventId < events.length, "Event does not exist");
+        _;
+    }
+
+    modifier onlyOrganizer(uint256 _eventId) {
+        require(events[_eventId].organizer == msg.sender, "Only organizer can perform this action");
+        _;
+    }
+
+    /**
+     * @dev Create a new event
+     * @param _title Event title
+     * @param _description Event description
+     * @param _location Event location
+     * @param _startTime Event start timestamp
+     * @param _endTime Event end timestamp
+     * @param _maxAttendees Maximum number of attendees (0 for unlimited)
+     * @param _requiresApproval Whether RSVPs need organizer approval
+     */
+    function createEvent(
+        string memory _title,
+        string memory _description,
+        string memory _location,
+        uint256 _startTime,
+        uint256 _endTime,
+        uint256 _maxAttendees,
+        bool _requiresApproval
+    ) external {
+        require(bytes(_title).length > 0, "Title cannot be empty");
+        require(_startTime > block.timestamp + MIN_ADVANCE_NOTICE, "Event must be scheduled in advance");
+        require(_endTime > _startTime, "End time must be after start time");
+        require(_endTime - _startTime <= MAX_EVENT_DURATION, "Event duration too long");
+
+        uint256 eventId = nextEventId;
+        nextEventId++;
+
+        Event memory newEvent = Event({
+            id: eventId,
+            organizer: msg.sender,
+            title: _title,
+            description: _description,
+            location: _location,
+            startTime: _startTime,
+            endTime: _endTime,
+            maxAttendees: _maxAttendees,
+            confirmedCount: 0,
+            waitlistCount: 0,
+            requiresApproval: _requiresApproval,
+            status: EventStatus.UPCOMING,
+            createdAt: block.timestamp
+        });
+
+        events.push(newEvent);
+        organizerEvents[msg.sender].push(eventId);
+        totalEvents++;
+
+        emit EventCreated(eventId, msg.sender, _title, _startTime, _maxAttendees);
+    }
+}
