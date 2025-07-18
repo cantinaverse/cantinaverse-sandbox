@@ -79,4 +79,9 @@ contract EventRSVP {
         require(_eventId < events.length, "Event does not exist");
         _;
     }
+
+    modifier onlyOrganizer(uint256 _eventId) {
+        require(events[_eventId].organizer == msg.sender, "Only organizer can perform this action");
+        _;
+    }
 }
