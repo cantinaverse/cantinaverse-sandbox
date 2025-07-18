@@ -35,4 +35,14 @@ contract EventRSVP {
         EventStatus status;
         uint256 createdAt;
     }
+
+    struct RSVP {
+        address attendee;
+        uint256 eventId;
+        RSVPStatus status;
+        uint256 timestamp;
+        string message; // Optional message from attendee
+        bool checkedIn;
+        uint256 checkedInAt;
+    }
 }
