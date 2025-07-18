@@ -6,10 +6,33 @@ pragma solidity ^0.8.19;
  * @dev An event RSVP system where people can register for events
  */
 contract EventRSVP {
-        enum RSVPStatus {
+    enum RSVPStatus {
         PENDING,
         CONFIRMED,
         CANCELLED,
         WAITLISTED
+    }
+
+     enum EventStatus {
+        UPCOMING,
+        ONGOING,
+        COMPLETED,
+        CANCELLED
+    }
+
+    struct Event {
+        uint256 id;
+        address organizer;
+        string title;
+        string description;
+        string location;
+        uint256 startTime;
+        uint256 endTime;
+        uint256 maxAttendees;
+        uint256 confirmedCount;
+        uint256 waitlistCount;
+        bool requiresApproval;
+        EventStatus status;
+        uint256 createdAt;
     }
 }
