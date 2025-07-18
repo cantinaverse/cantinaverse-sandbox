@@ -70,4 +70,7 @@ contract EventRSVP {
     event RSVPStatusChanged(
         uint256 indexed eventId, address indexed attendee, RSVPStatus oldStatus, RSVPStatus newStatus
     );
+
+    event AttendeeCheckedIn(uint256 indexed eventId, address indexed attendee, uint256 timestamp);
+
 }
