@@ -65,4 +65,6 @@ contract EventRSVP {
         uint256 indexed eventId, address indexed organizer, string title, uint256 startTime, uint256 maxAttendees
     );
 
+    event RSVPSubmitted(uint256 indexed eventId, address indexed attendee, RSVPStatus status);
+
 }
