@@ -177,6 +177,12 @@ contract EventRSVP {
         emit RSVPSubmitted(_eventId, msg.sender, initialStatus);
     }
 
+    /**
+     * @dev Approve or reject a pending RSVP (organizer only)
+     * @param _eventId Event ID
+     * @param _attendee Attendee address
+     * @param _approve True to approve, false to reject
+     */
     function approveRSVP(uint256 _eventId, address _attendee, bool _approve)
         external
         validEvent(_eventId)
