@@ -246,6 +246,11 @@ contract EventRSVP {
         emit RSVPStatusChanged(_eventId, msg.sender, oldStatus, RSVPStatus.CANCELLED);
     }
 
+    /**
+     * @dev Check in an attendee (organizer only)
+     * @param _eventId Event ID
+     * @param _attendee Attendee address
+     */
      function checkInAttendee(uint256 _eventId, address _attendee)
         external
         validEvent(_eventId)
@@ -264,5 +269,4 @@ contract EventRSVP {
 
         emit AttendeeCheckedIn(_eventId, _attendee, block.timestamp);
     }
-
 }
