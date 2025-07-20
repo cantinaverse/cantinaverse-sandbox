@@ -135,6 +135,11 @@ contract EventRSVP {
         emit EventCreated(eventId, msg.sender, _title, _startTime, _maxAttendees);
     }
 
+    /**
+     * @dev RSVP to an event
+     * @param _eventId Event ID
+     * @param _message Optional message from attendee
+     */
      function rsvp(uint256 _eventId, string memory _message) external validEvent(_eventId) {
         Event storage eventData = events[_eventId];
         require(eventData.status == EventStatus.UPCOMING, "Event is not accepting RSVPs");
