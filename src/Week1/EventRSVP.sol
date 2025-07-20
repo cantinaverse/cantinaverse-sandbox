@@ -211,7 +211,11 @@ contract EventRSVP {
         emit RSVPStatusChanged(_eventId, _attendee, oldStatus, rsvp.status);
     }
 
- function cancelRSVP(uint256 _eventId) external validEvent(_eventId) {
+    /**
+     * @dev Cancel your own RSVP
+     * @param _eventId Event ID
+     */
+    function cancelRSVP(uint256 _eventId) external validEvent(_eventId) {
         RSVP storage rsvp = eventRSVPs[_eventId][msg.sender];
         require(rsvp.attendee == msg.sender, "No RSVP found");
         require(rsvp.status != RSVPStatus.CANCELLED, "RSVP already cancelled");
