@@ -134,4 +134,139 @@ contract EventRSVP {
 
         emit EventCreated(eventId, msg.sender, _title, _startTime, _maxAttendees);
     }
+
+    /**
+     * @dev RSVP to an event
+     * @param _eventId Event ID
+     * @param _message Optional message from attendee
+     */
+     function rsvp(uint256 _eventId, string memory _message) external validEvent(_eventId) {
+        Event storage eventData = events[_eventId];
+        require(eventData.status == EventStatus.UPCOMING, "Event is not accepting RSVPs");
+        require(block.timestamp < eventData.startTime, "Event has already started");
+        require(eventRSVPs[_eventId][msg.sender].attendee == address(0), "Already RSVPed");
+
+        RSVPStatus initialStatus;
+
+        // Determine initial status
+        if (eventData.requiresApproval) {
+            initialStatus = RSVPStatus.PENDING;
+        } else if (eventData.maxAttendees == 0 || eventData.confirmedCount < eventData.maxAttendees) {
+            initialStatus = RSVPStatus.CONFIRMED;
+            eventData.confirmedCount++;
+            eventAttendees[_eventId].push(msg.sender);
+        } else {
+            initialStatus = RSVPStatus.WAITLISTED;
+            eventData.waitlistCount++;
+            eventWaitlist[_eventId].push(msg.sender);
+        }
+
+        RSVP memory newRSVP = RSVP({
+            attendee: msg.sender,
+            eventId: _eventId,
+            status: initialStatus,
+            timestamp: block.timestamp,
+            message: _message,
+            checkedIn: false,
+            checkedInAt: 0
+        });
+
+        eventRSVPs[_eventId][msg.sender] = newRSVP;
+        userEvents[msg.sender].push(_eventId);
+
+        emit RSVPSubmitted(_eventId, msg.sender, initialStatus);
+    }
+
+    /**
+     * @dev Approve or reject a pending RSVP (organizer only)
+     * @param _eventId Event ID
+     * @param _attendee Attendee address
+     * @param _approve True to approve, false to reject
+     */
+    function approveRSVP(uint256 _eventId, address _attendee, bool _approve)
+        external
+        validEvent(_eventId)
+        onlyOrganizer(_eventId)
+    {
+        RSVP storage rsvp = eventRSVPs[_eventId][_attendee];
+        require(rsvp.status == RSVPStatus.PENDING, "RSVP is not pending approval");
+
+        Event storage eventData = events[_eventId];
+        RSVPStatus oldStatus = rsvp.status;
+
+        if (_approve) {
+            if (eventData.maxAttendees == 0 || eventData.confirmedCount < eventData.maxAttendees) {
+                rsvp.status = RSVPStatus.CONFIRMED;
+                eventData.confirmedCount++;
+                eventAttendees[_eventId].push(_attendee);
+            } else {
+                rsvp.status = RSVPStatus.WAITLISTED;
+                eventData.waitlistCount++;
+                eventWaitlist[_eventId].push(_attendee);
+            }
+        } else {
+            rsvp.status = RSVPStatus.CANCELLED;
+        }
+
+        emit RSVPStatusChanged(_eventId, _attendee, oldStatus, rsvp.status);
+    }
+
+    /**
+     * @dev Cancel your own RSVP
+     * @param _eventId Event ID
+     */
+    function cancelRSVP(uint256 _eventId) external validEvent(_eventId) {
+        RSVP storage rsvp = eventRSVPs[_eventId][msg.sender];
+        require(rsvp.attendee == msg.sender, "No RSVP found");
+        require(rsvp.status != RSVPStatus.CANCELLED, "RSVP already cancelled");
+
+        Event storage eventData = events[_eventId];
+        RSVPStatus oldStatus = rsvp.status;
+
+        if (rsvp.status == RSVPStatus.CONFIRMED) {
+            eventData.confirmedCount--;
+            _removeFromArray(eventAttendees[_eventId], msg.sender);
+
+            // Move someone from waitlist if space available
+            if (eventWaitlist[_eventId].length > 0) {
+                address waitlistUser = eventWaitlist[_eventId][0];
+                _removeFromArray(eventWaitlist[_eventId], waitlistUser);
+                eventAttendees[_eventId].push(waitlistUser);
+                eventRSVPs[_eventId][waitlistUser].status = RSVPStatus.CONFIRMED;
+                eventData.waitlistCount--;
+
+                emit RSVPStatusChanged(_eventId, waitlistUser, RSVPStatus.WAITLISTED, RSVPStatus.CONFIRMED);
+            }
+        } else if (rsvp.status == RSVPStatus.WAITLISTED) {
+            eventData.waitlistCount--;
+            _removeFromArray(eventWaitlist[_eventId], msg.sender);
+        }
+
+        rsvp.status = RSVPStatus.CANCELLED;
+        emit RSVPStatusChanged(_eventId, msg.sender, oldStatus, RSVPStatus.CANCELLED);
+    }
+
+    /**
+     * @dev Check in an attendee (organizer only)
+     * @param _eventId Event ID
+     * @param _attendee Attendee address
+     */
+     function checkInAttendee(uint256 _eventId, address _attendee)
+        external
+        validEvent(_eventId)
+        onlyOrganizer(_eventId)
+    {
+        RSVP storage rsvp = eventRSVPs[_eventId][_attendee];
+        require(rsvp.status == RSVPStatus.CONFIRMED, "Attendee not confirmed");
+        require(!rsvp.checkedIn, "Already checked in");
+
+        Event storage eventData = events[_eventId];
+        require(block.timestamp >= eventData.startTime, "Event has not started");
+        require(block.timestamp <= eventData.endTime, "Event has ended");
+
+        rsvp.checkedIn = true;
+        rsvp.checkedInAt = block.timestamp;
+
+        emit AttendeeCheckedIn(_eventId, _attendee, block.timestamp);
+    }
 }
