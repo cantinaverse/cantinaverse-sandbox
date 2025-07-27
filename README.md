@@ -127,3 +127,9 @@ smart-contract-sandbox/
 - **TokenCreation.sol** - ERC-20 token factory
 - **TokenVault.sol** - Secure token storage system
 
+## 🧪 Running Tests
+
+Run all tests:
+```bash
+forge test
+```
