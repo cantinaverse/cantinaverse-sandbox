@@ -109,3 +109,10 @@ smart-contract-sandbox/
 ### Week 3: Advanced Patterns & Security
 **Focus:** Access control, time-based logic, and security patterns
 
+- **AccessControl.sol** - Role-based permission system
+- **Counter.sol** - Advanced counter with multiple features
+- **NumberGuesser.sol** - Game with randomness and rewards
+- **SimpleStaking.sol** - Token staking with rewards
+- **SubscriptionManager.sol** - Subscription-based service management
+- **TimeLock.sol** - Time-delayed execution mechanism
+
