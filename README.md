@@ -81,6 +81,7 @@ smart-contract-sandbox/
 └── README.md
 ```
 
+
 ## 📚 Weekly Breakdown
 
 ### Week 1: Foundations & Data Structures
@@ -103,3 +104,8 @@ smart-contract-sandbox/
 - **GlobalCounter.sol** - Shared counter with access controls
 - **MessageWall.sol** - Public message board with moderation
 - **SimplePoll.sol** - Poll creation and voting system
+
+
+### Week 3: Advanced Patterns & Security
+**Focus:** Access control, time-based logic, and security patterns
+
