@@ -138,3 +138,8 @@ Run tests for a specific week:
 ```bash
 forge test --match-path test/Week1/*
 ```
+
+Run tests with verbose output:
+```bash
+forge test -vvv
+```
