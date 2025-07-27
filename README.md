@@ -94,3 +94,8 @@ smart-contract-sandbox/
 - **ReputationSystem.sol** - Basic reputation scoring mechanism
 - **StatusBoard.sol** - Public status update system
 - **VotingSystem.sol** - Simple voting mechanism
+
+
+### Week 2: Intermediate Patterns
+**Focus:** State management, counters, and user interactions
+
