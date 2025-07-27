@@ -86,3 +86,11 @@ smart-contract-sandbox/
 ### Week 1: Foundations & Data Structures
 **Focus:** Basic Solidity syntax, storage patterns, and simple interactions
 
+- **CertificateStorage.sol** - Digital certificate issuance and verification
+- **EventRSVP.sol** - Event management with RSVP functionality
+- **GuestBook.sol** - Simple message storage and retrieval
+- **NameRegistry.sol** - Name-to-address mapping system
+- **PersonalRegistry.sol** - Personal information storage
+- **ReputationSystem.sol** - Basic reputation scoring mechanism
+- **StatusBoard.sol** - Public status update system
+- **VotingSystem.sol** - Simple voting mechanism
