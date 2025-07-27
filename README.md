@@ -133,3 +133,8 @@ Run all tests:
 ```bash
 forge test
 ```
+
+Run tests for a specific week:
+```bash
+forge test --match-path test/Week1/*
+```
