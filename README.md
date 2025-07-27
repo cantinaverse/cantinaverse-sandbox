@@ -143,3 +143,8 @@ Run tests with verbose output:
 ```bash
 forge test -vvv
 ```
+
+Run tests with gas reporting:
+```bash
+forge test --gas-report
+```
