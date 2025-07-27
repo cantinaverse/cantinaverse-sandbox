@@ -118,3 +118,12 @@ smart-contract-sandbox/
 
 ### Week 4: Complex Applications
 **Focus:** Token standards, DeFi patterns, and advanced applications
+
+- **AuctionHouse.sol** - English auction implementation
+- **EscrowContract.sol** - Secure escrow service
+- **LotteryContract.sol** - Lottery system with random selection
+- **SimpleNFT.sol** - ERC-721 NFT implementation
+- **TaskBounty.sol** - Bounty system for task completion
+- **TokenCreation.sol** - ERC-20 token factory
+- **TokenVault.sol** - Secure token storage system
+
