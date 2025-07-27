@@ -116,3 +116,5 @@ smart-contract-sandbox/
 - **SubscriptionManager.sol** - Subscription-based service management
 - **TimeLock.sol** - Time-delayed execution mechanism
 
+### Week 4: Complex Applications
+**Focus:** Token standards, DeFi patterns, and advanced applications
