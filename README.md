@@ -59,7 +59,6 @@ cp .env.example .env
 ```
 
 ## 📁 Project Structure
-
 ```
 smart-contract-sandbox/
 ├── src/
@@ -81,4 +80,9 @@ smart-contract-sandbox/
 ├── foundry.toml        # Foundry configuration
 └── README.md
 ```
+
+## 📚 Weekly Breakdown
+
+### Week 1: Foundations & Data Structures
+**Focus:** Basic Solidity syntax, storage patterns, and simple interactions
 
