@@ -99,3 +99,7 @@ smart-contract-sandbox/
 ### Week 2: Intermediate Patterns
 **Focus:** State management, counters, and user interactions
 
+- **AttendanceTracker.sol** - Track attendance with timestamps
+- **GlobalCounter.sol** - Shared counter with access controls
+- **MessageWall.sol** - Public message board with moderation
+- **SimplePoll.sol** - Poll creation and voting system
