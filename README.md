@@ -59,7 +59,6 @@ cp .env.example .env
 ```
 
 ## 📁 Project Structure
-
 ```
 smart-contract-sandbox/
 ├── src/
@@ -82,3 +81,70 @@ smart-contract-sandbox/
 └── README.md
 ```
 
+
+## 📚 Weekly Breakdown
+
+### Week 1: Foundations & Data Structures
+**Focus:** Basic Solidity syntax, storage patterns, and simple interactions
+
+- **CertificateStorage.sol** - Digital certificate issuance and verification
+- **EventRSVP.sol** - Event management with RSVP functionality
+- **GuestBook.sol** - Simple message storage and retrieval
+- **NameRegistry.sol** - Name-to-address mapping system
+- **PersonalRegistry.sol** - Personal information storage
+- **ReputationSystem.sol** - Basic reputation scoring mechanism
+- **StatusBoard.sol** - Public status update system
+- **VotingSystem.sol** - Simple voting mechanism
+
+
+### Week 2: Intermediate Patterns
+**Focus:** State management, counters, and user interactions
+
+- **AttendanceTracker.sol** - Track attendance with timestamps
+- **GlobalCounter.sol** - Shared counter with access controls
+- **MessageWall.sol** - Public message board with moderation
+- **SimplePoll.sol** - Poll creation and voting system
+
+
+### Week 3: Advanced Patterns & Security
+**Focus:** Access control, time-based logic, and security patterns
+
+- **AccessControl.sol** - Role-based permission system
+- **Counter.sol** - Advanced counter with multiple features
+- **NumberGuesser.sol** - Game with randomness and rewards
+- **SimpleStaking.sol** - Token staking with rewards
+- **SubscriptionManager.sol** - Subscription-based service management
+- **TimeLock.sol** - Time-delayed execution mechanism
+
+### Week 4: Complex Applications
+**Focus:** Token standards, DeFi patterns, and advanced applications
+
+- **AuctionHouse.sol** - English auction implementation
+- **EscrowContract.sol** - Secure escrow service
+- **LotteryContract.sol** - Lottery system with random selection
+- **SimpleNFT.sol** - ERC-721 NFT implementation
+- **TaskBounty.sol** - Bounty system for task completion
+- **TokenCreation.sol** - ERC-20 token factory
+- **TokenVault.sol** - Secure token storage system
+
+## 🧪 Running Tests
+
+Run all tests:
+```bash
+forge test
+```
+
+Run tests for a specific week:
+```bash
+forge test --match-path test/Week1/*
+```
+
+Run tests with verbose output:
+```bash
+forge test -vvv
+```
+
+Run tests with gas reporting:
+```bash
+forge test --gas-report
+```
