@@ -186,3 +186,8 @@ forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url $SEPOL
 #### CertificateStorage.sol
 A digital certificate management system that allows authorized issuers to create certificates and users to verify their authenticity.
 
+**Key Features:**
+- Certificate issuance with metadata
+- Verification system
+- Issuer authorization
+- Event logging
