@@ -148,3 +148,55 @@ Run tests with gas reporting:
 ```bash
 forge test --gas-report
 ```
+
+## 🚀 Deployment
+
+Each contract has its own deployment script in the `script/deploy/` directory.
+
+### Local Deployment (Anvil)
+
+1. **Start local blockchain:**
+```bash
+anvil
+```
+
+2. **Deploy a specific contract:**
+```bash
+forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url http://localhost:8545 --broadcast
+```
+
+### Testnet Deployment
+
+1. **Set up your `.env` file:**
+```bash
+SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+PRIVATE_KEY=your_private_key_here
+ETHERSCAN_API_KEY=your_etherscan_api_key
+```
+
+2. **Deploy to Sepolia:**
+```bash
+forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify
+```
+
+## 📝 Contract Descriptions
+
+### Week 1 Contracts
+
+#### CertificateStorage.sol
+A digital certificate management system that allows authorized issuers to create certificates and users to verify their authenticity.
+
+**Key Features:**
+- Certificate issuance with metadata
+- Verification system
+- Issuer authorization
+- Event logging
+
+#### EventRSVP.sol
+An event management contract that handles event creation, RSVP tracking, and attendance confirmation.
+
+**Key Features:**
+- Event creation with details
+- RSVP functionality
+- Attendance tracking
+- Capacity management
