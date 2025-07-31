@@ -148,3 +148,8 @@ Run tests with gas reporting:
 ```bash
 forge test --gas-report
 ```
+
+## 🚀 Deployment
+
+Each contract has its own deployment script in the `script/deploy/` directory.
+
