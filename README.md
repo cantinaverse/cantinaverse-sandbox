@@ -191,3 +191,6 @@ A digital certificate management system that allows authorized issuers to create
 - Verification system
 - Issuer authorization
 - Event logging
+
+#### EventRSVP.sol
+An event management contract that handles event creation, RSVP tracking, and attendance confirmation.
