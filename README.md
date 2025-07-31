@@ -159,3 +159,8 @@ Each contract has its own deployment script in the `script/deploy/` directory.
 ```bash
 anvil
 ```
+
+2. **Deploy a specific contract:**
+```bash
+forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url http://localhost:8545 --broadcast
+```
