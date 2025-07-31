@@ -164,3 +164,12 @@ anvil
 ```bash
 forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url http://localhost:8545 --broadcast
 ```
+
+### Testnet Deployment
+
+1. **Set up your `.env` file:**
+```bash
+SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+PRIVATE_KEY=your_private_key_here
+ETHERSCAN_API_KEY=your_etherscan_api_key
+```
