@@ -173,3 +173,8 @@ SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
 PRIVATE_KEY=your_private_key_here
 ETHERSCAN_API_KEY=your_etherscan_api_key
 ```
+
+2. **Deploy to Sepolia:**
+```bash
+forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify
+```
