@@ -153,3 +153,9 @@ forge test --gas-report
 
 Each contract has its own deployment script in the `script/deploy/` directory.
 
+### Local Deployment (Anvil)
+
+1. **Start local blockchain:**
+```bash
+anvil
+```
