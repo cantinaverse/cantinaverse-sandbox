@@ -194,3 +194,9 @@ A digital certificate management system that allows authorized issuers to create
 
 #### EventRSVP.sol
 An event management contract that handles event creation, RSVP tracking, and attendance confirmation.
+
+**Key Features:**
+- Event creation with details
+- RSVP functionality
+- Attendance tracking
+- Capacity management
