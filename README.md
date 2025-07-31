@@ -178,3 +178,11 @@ ETHERSCAN_API_KEY=your_etherscan_api_key
 ```bash
 forge script script/deploy/Week1/DeployCertificateStorage.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify
 ```
+
+## 📝 Contract Descriptions
+
+### Week 1 Contracts
+
+#### CertificateStorage.sol
+A digital certificate management system that allows authorized issuers to create certificates and users to verify their authenticity.
+
