@@ -221,3 +221,9 @@ A name registration system that maps human-readable names to Ethereum addresses.
 
 #### PersonalRegistry.sol
 A personal information storage system with privacy controls.
+
+**Key Features:**
+- Personal data storage
+- Privacy settings
+- Access control
+- Data verification
