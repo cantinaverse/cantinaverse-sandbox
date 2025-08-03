@@ -254,3 +254,5 @@ A simple voting system for proposals with basic governance features.
 - Voting mechanism
 - Vote counting
 - Result determination
+
+### Week 2 Contracts
