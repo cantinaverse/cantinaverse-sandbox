@@ -218,3 +218,6 @@ A name registration system that maps human-readable names to Ethereum addresses.
 - Address resolution
 - Transfer functionality
 - Expiration handling
+
+#### PersonalRegistry.sol
+A personal information storage system with privacy controls.
