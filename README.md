@@ -245,3 +245,7 @@ A public status board where users can post updates and view others' statuses.
 - Public viewing
 - Timestamp tracking
 - User profiles
+
+#### VotingSystem.sol
+A simple voting system for proposals with basic governance features.
+
