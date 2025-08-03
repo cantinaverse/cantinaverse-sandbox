@@ -203,3 +203,9 @@ An event management contract that handles event creation, RSVP tracking, and att
 
 #### GuestBook.sol
 A simple guest book where users can leave messages with timestamps.
+
+**Key Features:**
+- Message storage
+- Timestamp tracking
+- Message retrieval
+- User interaction history
