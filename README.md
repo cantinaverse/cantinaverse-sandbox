@@ -227,3 +227,6 @@ A personal information storage system with privacy controls.
 - Privacy settings
 - Access control
 - Data verification
+
+#### ReputationSystem.sol
+A reputation scoring system that tracks user credibility based on community feedback.
