@@ -200,3 +200,59 @@ An event management contract that handles event creation, RSVP tracking, and att
 - RSVP functionality
 - Attendance tracking
 - Capacity management
+
+#### GuestBook.sol
+A simple guest book where users can leave messages with timestamps.
+
+**Key Features:**
+- Message storage
+- Timestamp tracking
+- Message retrieval
+- User interaction history
+
+#### NameRegistry.sol
+A name registration system that maps human-readable names to Ethereum addresses.
+
+**Key Features:**
+- Name registration
+- Address resolution
+- Transfer functionality
+- Expiration handling
+
+#### PersonalRegistry.sol
+A personal information storage system with privacy controls.
+
+**Key Features:**
+- Personal data storage
+- Privacy settings
+- Access control
+- Data verification
+
+#### ReputationSystem.sol
+A reputation scoring system that tracks user credibility based on community feedback.
+
+**Key Features:**
+- Reputation scoring
+- Feedback system
+- Score calculation
+- Reputation history
+
+#### StatusBoard.sol
+A public status board where users can post updates and view others' statuses.
+
+**Key Features:**
+- Status updates
+- Public viewing
+- Timestamp tracking
+- User profiles
+
+#### VotingSystem.sol
+A simple voting system for proposals with basic governance features.
+
+**Key Features:**
+- Proposal creation
+- Voting mechanism
+- Vote counting
+- Result determination
+
+### Week 2 Contracts
