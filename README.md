@@ -212,3 +212,9 @@ A simple guest book where users can leave messages with timestamps.
 
 #### NameRegistry.sol
 A name registration system that maps human-readable names to Ethereum addresses.
+
+**Key Features:**
+- Name registration
+- Address resolution
+- Transfer functionality
+- Expiration handling
