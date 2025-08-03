@@ -240,3 +240,8 @@ A reputation scoring system that tracks user credibility based on community feed
 #### StatusBoard.sol
 A public status board where users can post updates and view others' statuses.
 
+**Key Features:**
+- Status updates
+- Public viewing
+- Timestamp tracking
+- User profiles
