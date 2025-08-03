@@ -249,3 +249,8 @@ A public status board where users can post updates and view others' statuses.
 #### VotingSystem.sol
 A simple voting system for proposals with basic governance features.
 
+**Key Features:**
+- Proposal creation
+- Voting mechanism
+- Vote counting
+- Result determination
