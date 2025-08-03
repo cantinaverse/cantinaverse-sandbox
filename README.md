@@ -200,3 +200,6 @@ An event management contract that handles event creation, RSVP tracking, and att
 - RSVP functionality
 - Attendance tracking
 - Capacity management
+
+#### GuestBook.sol
+A simple guest book where users can leave messages with timestamps.
