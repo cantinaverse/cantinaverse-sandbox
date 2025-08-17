@@ -264,3 +264,7 @@ Tracks attendance for events or meetings with timestamp verification.
 - Timestamp verification
 - Attendance reports
 - Event management
+
+#### GlobalCounter.sol
+A shared counter that multiple users can increment/decrement with access controls.
+
