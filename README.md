@@ -283,3 +283,8 @@ A public message wall with moderation capabilities and user interactions.
 
 #### SimplePoll.sol
 A polling system that allows creation of polls with multiple options and voting.
+**Key Features:**
+- Poll creation
+- Multiple choice options
+- Voting mechanism
+- Results display
