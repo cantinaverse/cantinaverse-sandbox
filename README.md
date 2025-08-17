@@ -317,3 +317,8 @@ A number guessing game with rewards and randomness.
 
 #### SimpleStaking.sol
 A token staking contract with rewards and time-based unlocking.
+**Key Features:**
+- Token staking
+- Reward calculation
+- Time-based unlocking
+- Yield farming
