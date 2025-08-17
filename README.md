@@ -288,3 +288,53 @@ A polling system that allows creation of polls with multiple options and voting.
 - Multiple choice options
 - Voting mechanism
 - Results display
+
+### Week 3 Contracts
+
+#### AccessControl.sol
+A comprehensive role-based access control system.
+**Key Features:**
+- Role management
+- Permission system
+- Admin functions
+- Role hierarchy
+
+#### Counter.sol
+An advanced counter with multiple features and access patterns.
+**Key Features:**
+- Multiple counter types
+- Access patterns
+- State management
+- Event tracking
+
+#### NumberGuesser.sol
+A number guessing game with rewards and randomness.
+**Key Features:**
+- Random number generation
+- Guessing mechanism
+- Reward system
+- Game state management
+
+#### SimpleStaking.sol
+A token staking contract with rewards and time-based unlocking.
+**Key Features:**
+- Token staking
+- Reward calculation
+- Time-based unlocking
+- Yield farming
+
+#### SubscriptionManager.sol
+Manages subscription-based services with payment handling.
+**Key Features:**
+- Subscription creation
+- Payment processing
+- Renewal system
+- Service access
+
+#### TimeLock.sol
+A time-delayed execution mechanism for secure operations.
+**Key Features:**
+- Time-delayed execution
+- Transaction queuing
+- Security mechanisms
+- Admin controls
