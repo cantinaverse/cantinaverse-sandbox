@@ -293,3 +293,8 @@ A polling system that allows creation of polls with multiple options and voting.
 
 #### AccessControl.sol
 A comprehensive role-based access control system.
+**Key Features:**
+- Role management
+- Permission system
+- Admin functions
+- Role hierarchy
