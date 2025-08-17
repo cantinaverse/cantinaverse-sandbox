@@ -273,3 +273,6 @@ A shared counter that multiple users can increment/decrement with access control
 - Counter operations
 - Event logging
 
+#### MessageWall.sol
+A public message wall with moderation capabilities and user interactions.
+
