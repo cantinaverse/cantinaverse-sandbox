@@ -314,3 +314,6 @@ A number guessing game with rewards and randomness.
 - Guessing mechanism
 - Reward system
 - Game state management
+
+#### SimpleStaking.sol
+A token staking contract with rewards and time-based unlocking.
