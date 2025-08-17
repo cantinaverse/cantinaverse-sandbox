@@ -275,4 +275,9 @@ A shared counter that multiple users can increment/decrement with access control
 
 #### MessageWall.sol
 A public message wall with moderation capabilities and user interactions.
+**Key Features:**
+- Message posting
+- Moderation tools
+- User interactions
+- Content filtering
 
