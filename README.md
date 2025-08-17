@@ -256,3 +256,35 @@ A simple voting system for proposals with basic governance features.
 - Result determination
 
 ### Week 2 Contracts
+
+#### AttendanceTracker.sol
+Tracks attendance for events or meetings with timestamp verification.
+**Key Features:**
+- Check-in/check-out system
+- Timestamp verification
+- Attendance reports
+- Event management
+
+#### GlobalCounter.sol
+A shared counter that multiple users can increment/decrement with access controls.
+**Key Features:**
+- Global state management
+- Access control
+- Counter operations
+- Event logging
+
+#### MessageWall.sol
+A public message wall with moderation capabilities and user interactions.
+**Key Features:**
+- Message posting
+- Moderation tools
+- User interactions
+- Content filtering
+
+#### SimplePoll.sol
+A polling system that allows creation of polls with multiple options and voting.
+**Key Features:**
+- Poll creation
+- Multiple choice options
+- Voting mechanism
+- Results display
