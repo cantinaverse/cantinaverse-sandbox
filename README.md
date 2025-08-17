@@ -322,3 +322,6 @@ A token staking contract with rewards and time-based unlocking.
 - Reward calculation
 - Time-based unlocking
 - Yield farming
+
+#### SubscriptionManager.sol
+Manages subscription-based services with payment handling.
