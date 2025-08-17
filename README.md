@@ -298,3 +298,6 @@ A comprehensive role-based access control system.
 - Permission system
 - Admin functions
 - Role hierarchy
+
+#### Counter.sol
+An advanced counter with multiple features and access patterns.
