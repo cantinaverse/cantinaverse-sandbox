@@ -309,3 +309,8 @@ An advanced counter with multiple features and access patterns.
 
 #### NumberGuesser.sol
 A number guessing game with rewards and randomness.
+**Key Features:**
+- Random number generation
+- Guessing mechanism
+- Reward system
+- Game state management
