@@ -333,3 +333,8 @@ Manages subscription-based services with payment handling.
 
 #### TimeLock.sol
 A time-delayed execution mechanism for secure operations.
+**Key Features:**
+- Time-delayed execution
+- Transaction queuing
+- Security mechanisms
+- Admin controls
