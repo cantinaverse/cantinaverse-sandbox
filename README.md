@@ -325,3 +325,8 @@ A token staking contract with rewards and time-based unlocking.
 
 #### SubscriptionManager.sol
 Manages subscription-based services with payment handling.
+**Key Features:**
+- Subscription creation
+- Payment processing
+- Renewal system
+- Service access
