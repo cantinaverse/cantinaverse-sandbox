@@ -281,3 +281,5 @@ A public message wall with moderation capabilities and user interactions.
 - User interactions
 - Content filtering
 
+#### SimplePoll.sol
+A polling system that allows creation of polls with multiple options and voting.
