@@ -301,3 +301,8 @@ A comprehensive role-based access control system.
 
 #### Counter.sol
 An advanced counter with multiple features and access patterns.
+**Key Features:**
+- Multiple counter types
+- Access patterns
+- State management
+- Event tracking
