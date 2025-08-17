@@ -259,3 +259,8 @@ A simple voting system for proposals with basic governance features.
 
 #### AttendanceTracker.sol
 Tracks attendance for events or meetings with timestamp verification.
+**Key Features:**
+- Check-in/check-out system
+- Timestamp verification
+- Attendance reports
+- Event management
