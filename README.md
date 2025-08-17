@@ -256,3 +256,6 @@ A simple voting system for proposals with basic governance features.
 - Result determination
 
 ### Week 2 Contracts
+
+#### AttendanceTracker.sol
+Tracks attendance for events or meetings with timestamp verification.
