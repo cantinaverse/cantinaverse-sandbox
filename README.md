@@ -306,3 +306,6 @@ An advanced counter with multiple features and access patterns.
 - Access patterns
 - State management
 - Event tracking
+
+#### NumberGuesser.sol
+A number guessing game with rewards and randomness.
