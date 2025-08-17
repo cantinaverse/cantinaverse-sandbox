@@ -330,3 +330,6 @@ Manages subscription-based services with payment handling.
 - Payment processing
 - Renewal system
 - Service access
+
+#### TimeLock.sol
+A time-delayed execution mechanism for secure operations.
