@@ -288,3 +288,8 @@ A polling system that allows creation of polls with multiple options and voting.
 - Multiple choice options
 - Voting mechanism
 - Results display
+
+### Week 3 Contracts
+
+#### AccessControl.sol
+A comprehensive role-based access control system.
