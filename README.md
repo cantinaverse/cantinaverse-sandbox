@@ -348,3 +348,6 @@ An English auction implementation with bidding and settlement.
 - Bidding mechanism
 - Settlement system
 - Reserve prices
+
+#### EscrowContract.sol
+A secure escrow service for safe transactions between parties.
