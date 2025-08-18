@@ -338,3 +338,8 @@ A time-delayed execution mechanism for secure operations.
 - Transaction queuing
 - Security mechanisms
 - Admin controls
+
+### Week 4 Contracts
+
+#### AuctionHouse.sol
+An English auction implementation with bidding and settlement.
