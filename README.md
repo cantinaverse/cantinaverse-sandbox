@@ -375,3 +375,8 @@ An ERC-721 compliant NFT contract with minting and metadata.
 
 #### TaskBounty.sol
 A bounty system for task completion with escrow and verification.
+**Key Features:**
+- Bounty creation
+- Task submission
+- Verification system
+- Payment distribution
