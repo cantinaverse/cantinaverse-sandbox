@@ -383,3 +383,8 @@ A bounty system for task completion with escrow and verification.
 
 #### TokenCreation.sol
 An ERC-20 token factory for creating custom tokens.
+**Key Features:**
+- Token creation
+- Custom parameters
+- Factory pattern
+- Token registry
