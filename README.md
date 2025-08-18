@@ -367,3 +367,8 @@ A lottery system with random winner selection and prize distribution.
 
 #### SimpleNFT.sol
 An ERC-721 compliant NFT contract with minting and metadata.
+**Key Features:**
+- NFT minting
+- Metadata management
+- Transfer functionality
+- Ownership tracking
