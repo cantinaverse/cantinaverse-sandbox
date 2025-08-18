@@ -388,3 +388,6 @@ An ERC-20 token factory for creating custom tokens.
 - Custom parameters
 - Factory pattern
 - Token registry
+
+#### TokenVault.sol
+A secure vault for storing and managing tokens with time locks.
