@@ -391,3 +391,8 @@ An ERC-20 token factory for creating custom tokens.
 
 #### TokenVault.sol
 A secure vault for storing and managing tokens with time locks.
+**Key Features:**
+- Token storage
+- Time-based unlocking
+- Multi-token support
+- Security features
