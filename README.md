@@ -351,3 +351,8 @@ An English auction implementation with bidding and settlement.
 
 #### EscrowContract.sol
 A secure escrow service for safe transactions between parties.
+**Key Features:**
+- Escrow creation
+- Dispute resolution
+- Fund management
+- Multi-party support
