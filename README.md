@@ -338,3 +338,61 @@ A time-delayed execution mechanism for secure operations.
 - Transaction queuing
 - Security mechanisms
 - Admin controls
+
+### Week 4 Contracts
+
+#### AuctionHouse.sol
+An English auction implementation with bidding and settlement.
+**Key Features:**
+- Auction creation
+- Bidding mechanism
+- Settlement system
+- Reserve prices
+
+#### EscrowContract.sol
+A secure escrow service for safe transactions between parties.
+**Key Features:**
+- Escrow creation
+- Dispute resolution
+- Fund management
+- Multi-party support
+
+#### LotteryContract.sol
+A lottery system with random winner selection and prize distribution.
+**Key Features:**
+- Ticket purchasing
+- Random selection
+- Prize distribution
+- Multiple rounds
+
+#### SimpleNFT.sol
+An ERC-721 compliant NFT contract with minting and metadata.
+**Key Features:**
+- NFT minting
+- Metadata management
+- Transfer functionality
+- Ownership tracking
+
+#### TaskBounty.sol
+A bounty system for task completion with escrow and verification.
+**Key Features:**
+- Bounty creation
+- Task submission
+- Verification system
+- Payment distribution
+
+#### TokenCreation.sol
+An ERC-20 token factory for creating custom tokens.
+**Key Features:**
+- Token creation
+- Custom parameters
+- Factory pattern
+- Token registry
+
+#### TokenVault.sol
+A secure vault for storing and managing tokens with time locks.
+**Key Features:**
+- Token storage
+- Time-based unlocking
+- Multi-token support
+- Security features
