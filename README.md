@@ -356,3 +356,6 @@ A secure escrow service for safe transactions between parties.
 - Dispute resolution
 - Fund management
 - Multi-party support
+
+#### LotteryContract.sol
+A lottery system with random winner selection and prize distribution.
