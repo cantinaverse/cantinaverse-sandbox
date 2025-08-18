@@ -380,3 +380,6 @@ A bounty system for task completion with escrow and verification.
 - Task submission
 - Verification system
 - Payment distribution
+
+#### TokenCreation.sol
+An ERC-20 token factory for creating custom tokens.
