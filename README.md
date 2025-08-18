@@ -372,3 +372,6 @@ An ERC-721 compliant NFT contract with minting and metadata.
 - Metadata management
 - Transfer functionality
 - Ownership tracking
+
+#### TaskBounty.sol
+A bounty system for task completion with escrow and verification.
