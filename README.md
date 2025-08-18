@@ -359,3 +359,8 @@ A secure escrow service for safe transactions between parties.
 
 #### LotteryContract.sol
 A lottery system with random winner selection and prize distribution.
+**Key Features:**
+- Ticket purchasing
+- Random selection
+- Prize distribution
+- Multiple rounds
