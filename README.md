@@ -364,3 +364,6 @@ A lottery system with random winner selection and prize distribution.
 - Random selection
 - Prize distribution
 - Multiple rounds
+
+#### SimpleNFT.sol
+An ERC-721 compliant NFT contract with minting and metadata.
