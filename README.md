@@ -343,3 +343,8 @@ A time-delayed execution mechanism for secure operations.
 
 #### AuctionHouse.sol
 An English auction implementation with bidding and settlement.
+**Key Features:**
+- Auction creation
+- Bidding mechanism
+- Settlement system
+- Reserve prices
