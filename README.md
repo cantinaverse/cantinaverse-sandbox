@@ -427,3 +427,8 @@ Contributions are welcome! Please follow these steps:
 - [OpenZeppelin](https://openzeppelin.com/) - Security libraries
 - [Etherscan](https://etherscan.io/) - Blockchain explorer
 - [Remix IDE](https://remix.ethereum.org/) - Online IDE
+
+### Security Resources
+- [ConsenSys Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)
+- [SWC Registry](https://swcregistry.io/) - Smart contract vulnerabilities
+- [Slither](https://github.com/crytic/slither) - Static analysis tool
