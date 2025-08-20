@@ -413,3 +413,12 @@ Contributions are welcome! Please follow these steps:
 - Include detailed comments and documentation
 - Ensure all tests pass before submitting
 - Add deployment scripts for new contracts
+
+## 📚 Resources
+
+### Learning Resources
+- [Solidity Documentation](https://docs.soliditylang.org/)
+- [Foundry Book](https://book.getfoundry.sh/)
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
+- [Ethereum Development Documentation](https://ethereum.org/en/developers/)
+
