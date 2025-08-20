@@ -405,3 +405,11 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow Solidity style guidelines
+- Write comprehensive tests for new contracts
+- Include detailed comments and documentation
+- Ensure all tests pass before submitting
+- Add deployment scripts for new contracts
