@@ -432,3 +432,7 @@ Contributions are welcome! Please follow these steps:
 - [ConsenSys Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)
 - [SWC Registry](https://swcregistry.io/) - Smart contract vulnerabilities
 - [Slither](https://github.com/crytic/slither) - Static analysis tool
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
