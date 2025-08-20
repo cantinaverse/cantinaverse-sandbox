@@ -396,3 +396,56 @@ A secure vault for storing and managing tokens with time locks.
 - Time-based unlocking
 - Multi-token support
 - Security features
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow Solidity style guidelines
+- Write comprehensive tests for new contracts
+- Include detailed comments and documentation
+- Ensure all tests pass before submitting
+- Add deployment scripts for new contracts
+
+## 📚 Resources
+
+### Learning Resources
+- [Solidity Documentation](https://docs.soliditylang.org/)
+- [Foundry Book](https://book.getfoundry.sh/)
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
+- [Ethereum Development Documentation](https://ethereum.org/en/developers/)
+
+### Tools & Frameworks
+- [Foundry](https://getfoundry.sh/) - Development framework
+- [OpenZeppelin](https://openzeppelin.com/) - Security libraries
+- [Etherscan](https://etherscan.io/) - Blockchain explorer
+- [Remix IDE](https://remix.ethereum.org/) - Online IDE
+
+### Security Resources
+- [ConsenSys Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)
+- [SWC Registry](https://swcregistry.io/) - Smart contract vulnerabilities
+- [Slither](https://github.com/crytic/slither) - Static analysis tool
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenZeppelin for security patterns and implementations
+- Foundry team for the excellent development framework
+- Ethereum community for continuous innovation
+- All contributors and educators in the blockchain space
+
+---
+
+**Happy Learning and Building! 🚀**
+
+For questions or support, please open an issue or reach out to the maintainers.
