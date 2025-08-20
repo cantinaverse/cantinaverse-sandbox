@@ -422,3 +422,8 @@ Contributions are welcome! Please follow these steps:
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
 - [Ethereum Development Documentation](https://ethereum.org/en/developers/)
 
+### Tools & Frameworks
+- [Foundry](https://getfoundry.sh/) - Development framework
+- [OpenZeppelin](https://openzeppelin.com/) - Security libraries
+- [Etherscan](https://etherscan.io/) - Blockchain explorer
+- [Remix IDE](https://remix.ethereum.org/) - Online IDE
