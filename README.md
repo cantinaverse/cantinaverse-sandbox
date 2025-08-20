@@ -443,3 +443,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Foundry team for the excellent development framework
 - Ethereum community for continuous innovation
 - All contributors and educators in the blockchain space
+
+---
+
+**Happy Learning and Building! 🚀**
+
+For questions or support, please open an issue or reach out to the maintainers.
