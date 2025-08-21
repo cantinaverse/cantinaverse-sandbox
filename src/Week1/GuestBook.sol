@@ -16,6 +16,7 @@ contract GuestBook {
     Message[] public messages;
     mapping(address => uint256[]) public userMessages; // Track message IDs by user
     mapping(address => uint256) public userMessageCount;
+    mapping(address => uint256) public lastMessageTime;
 
     uint256 public totalMessages;
     uint256 private nextMessageId;
