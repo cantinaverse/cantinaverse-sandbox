@@ -12,4 +12,7 @@ contract GuestBook {
         uint256 timestamp;
         uint256 id;
     }
+
+    Message[] public messages;
+
 }
