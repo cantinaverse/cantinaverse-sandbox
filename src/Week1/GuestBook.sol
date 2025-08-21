@@ -18,5 +18,6 @@ contract GuestBook {
     mapping(address => uint256) public userMessageCount;
 
     uint256 public totalMessages;
+    uint256 private nextMessageId;
 
 }
