@@ -20,4 +20,6 @@ contract GuestBook {
     uint256 public totalMessages;
     uint256 private nextMessageId;
 
+    // Configuration
+    uint256 public constant MAX_MESSAGE_LENGTH = 500;
 }
