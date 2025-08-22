@@ -25,4 +25,6 @@ contract GuestBook {
     uint256 public constant MAX_MESSAGE_LENGTH = 500;
     uint256 public constant COOLDOWN_PERIOD = 0; // 0 minute between messages
 
+    event MessagePosted(address indexed author, uint256 indexed messageId, string content, uint256 timestamp);
+
 }
