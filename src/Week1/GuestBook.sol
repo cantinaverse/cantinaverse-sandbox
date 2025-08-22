@@ -27,6 +27,10 @@ contract GuestBook {
 
     event MessagePosted(address indexed author, uint256 indexed messageId, string content, uint256 timestamp);
 
+    /**
+     * @dev Post a new message to the guestbook
+     * @param _content The message content
+     */
     function postMessage(string memory _content) external {
         require(bytes(_content).length > 0, "Message cannot be empty");
         require(bytes(_content).length <= MAX_MESSAGE_LENGTH, "Message too long");
