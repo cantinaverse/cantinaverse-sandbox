@@ -52,4 +52,9 @@ contract GuestBook {
 
         emit MessagePosted(msg.sender, messageId, _content, block.timestamp);
     }
+
+    function getMessage(uint256 _index) external view returns (Message memory) {
+        require(_index < messages.length, "Message index out of bounds");
+        return messages[_index];
+    }
 }
