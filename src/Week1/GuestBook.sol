@@ -83,6 +83,11 @@ contract GuestBook {
         return result;
     }
 
+    /**
+     * @dev Get messages by a specific user
+     * @param _user Address of the user
+     * @return Array of Message structs
+     */
     function getUserMessages(address _user) external view returns (Message[] memory) {
         uint256[] memory messageIds = userMessages[_user];
         Message[] memory result = new Message[](messageIds.length);
