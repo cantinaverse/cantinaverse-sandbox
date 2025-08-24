@@ -125,4 +125,8 @@ contract GuestBook {
 
         return result;
     }
+
+    function getTotalMessages() external view returns (uint256) {
+        return totalMessages;
+    }
 }
