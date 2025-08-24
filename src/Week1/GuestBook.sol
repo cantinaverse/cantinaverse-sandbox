@@ -151,4 +151,12 @@ contract GuestBook {
     function canPostMessage(address _user) external view returns (bool) {
         return block.timestamp >= lastMessageTime[_user] + COOLDOWN_PERIOD;
     }
+
+    function getCooldownRemaining(address _user) external view returns (uint256) {
+        uint256 nextAllowedTime = lastMessageTime[_user] + COOLDOWN_PERIOD;
+        if (block.timestamp >= nextAllowedTime) {
+            return 0;
+        }
+        return nextAllowedTime - block.timestamp;
+    }
 }
