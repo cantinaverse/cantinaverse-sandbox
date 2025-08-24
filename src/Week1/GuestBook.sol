@@ -53,6 +53,11 @@ contract GuestBook {
         emit MessagePosted(msg.sender, messageId, _content, block.timestamp);
     }
 
+    /**
+     * @dev Get a message by its index in the messages array
+     * @param _index Index of the message
+     * @return Message struct
+     */
     function getMessage(uint256 _index) external view returns (Message memory) {
         require(_index < messages.length, "Message index out of bounds");
         return messages[_index];
