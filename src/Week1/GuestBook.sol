@@ -152,6 +152,11 @@ contract GuestBook {
         return block.timestamp >= lastMessageTime[_user] + COOLDOWN_PERIOD;
     }
 
+   /**
+     * @dev Get time remaining until user can post next message
+     * @param _user Address to check
+     * @return Seconds remaining in cooldown (0 if can post now)
+     */
     function getCooldownRemaining(address _user) external view returns (uint256) {
         uint256 nextAllowedTime = lastMessageTime[_user] + COOLDOWN_PERIOD;
         if (block.timestamp >= nextAllowedTime) {
