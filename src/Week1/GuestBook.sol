@@ -63,6 +63,11 @@ contract GuestBook {
         return messages[_index];
     }
 
+    /**
+     * @dev Get the latest N messages
+     * @param _count Number of recent messages to retrieve
+     * @return Array of Message structs
+     */
     function getLatestMessages(uint256 _count) external view returns (Message[] memory) {
         require(_count > 0, "Count must be greater than 0");
 
