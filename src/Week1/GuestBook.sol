@@ -133,4 +133,8 @@ contract GuestBook {
     function getTotalMessages() external view returns (uint256) {
         return totalMessages;
     }
+
+    function getUserMessageCount(address _user) external view returns (uint256) {
+        return userMessageCount[_user];
+    }
 }
