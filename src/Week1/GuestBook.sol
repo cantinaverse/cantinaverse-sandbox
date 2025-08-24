@@ -82,4 +82,21 @@ contract GuestBook {
 
         return result;
     }
+
+    function getUserMessages(address _user) external view returns (Message[] memory) {
+        uint256[] memory messageIds = userMessages[_user];
+        Message[] memory result = new Message[](messageIds.length);
+
+        for (uint256 i = 0; i < messageIds.length; i++) {
+            // Find message by ID
+            for (uint256 j = 0; j < messages.length; j++) {
+                if (messages[j].id == messageIds[i]) {
+                    result[i] = messages[j];
+                    break;
+                }
+            }
+        }
+
+        return result;
+    }
 }
