@@ -142,4 +142,8 @@ contract GuestBook {
     function getUserMessageCount(address _user) external view returns (uint256) {
         return userMessageCount[_user];
     }
+
+    function canPostMessage(address _user) external view returns (bool) {
+        return block.timestamp >= lastMessageTime[_user] + COOLDOWN_PERIOD;
+    }
 }
