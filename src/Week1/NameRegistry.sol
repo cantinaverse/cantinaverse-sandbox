@@ -1,4 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract NameRegistry {}
+contract NameRegistry {
+    mapping(bytes32 => address) public nameToAddress;
+
+}
